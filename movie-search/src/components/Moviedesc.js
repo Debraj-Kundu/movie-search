@@ -9,7 +9,7 @@ const Moviedesc = () => {
   const [movie, setMovie] = useState()
 
   const getMovieRequest = async (searchValue) => {
-    searchValue = searchValue === '' ? 'star wars' : searchValue
+    //searchValue = searchValue === '' ? 'star wars' : searchValue
     const url = `http://www.omdbapi.com/?t=${searchValue}&type=movie&apikey=70c86ce7`
 
     const { data } = await axios.get(url)

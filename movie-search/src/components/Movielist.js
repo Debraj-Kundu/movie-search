@@ -10,15 +10,17 @@ const Movielist = () => {
   const [movies, setMovies] = useState()
 
   const getMovieRequest = async (searchValue) => {
-    searchValue = searchValue === '' ? 'star wars' : searchValue
-    const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=70c86ce7`
+    //searchValue = searchValue === '' ? 'star wars' : searchValue
+    if(searchValue.length > 0){
+      const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=70c86ce7`
 
-    const { data } = await axios.get(url)
-    //console.log(data.Search)
-    if (data.Search) {
-      setMovies(data.Search)
+      const { data } = await axios.get(url)
+      //console.log(data.Search)
+      if (data.Search) {
+        setMovies(data.Search)
+      }
+      //console.log(movies)
     }
-    //console.log(movies)
   }
 
   useEffect(() => {
