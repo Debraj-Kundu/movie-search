@@ -1,4 +1,4 @@
-import { Box, Button, Image } from '@chakra-ui/react'
+import { Box, Button, Image, Text } from '@chakra-ui/react'
 import { Input, InputGroup } from '@chakra-ui/input'
 import { IconButton } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
@@ -35,12 +35,14 @@ const Home = () => {
             )}
           </InputGroup>
         </Box>
+        <br/>
+        <Text align='center'>Playlist</Text>
         <Box m={20} display="flex" flexWrap="wrap" gap={'20'}>
           {playlist.length > 0 ?
             (playlist.map((e, i) => {
               return (
                 <Box>
-                  <Box key={i} noOfLines={1}>
+                  <Box key={i} noOfLines={1} lineHeight='4'>
                     <Image src={e.pic} alt={e.name} height="300" width='200' />
                     <h1>{e.name}</h1>
                   </Box>

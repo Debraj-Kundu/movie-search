@@ -5,7 +5,7 @@ const Navbar = () => {
     const navigate = useNavigate()
     return ( 
         <Box bgColor='blackAlpha.900' >
-        <Link to='/home'> 
+        <Link to='/'> 
         <Text p={3} style={{fontSize: '32px', cursor: 'pointer'}}>Movie Search</Text>
         </Link>
         </Box>
